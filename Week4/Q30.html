@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Guess the number</title>
+        <style>
+            body{
+                background-color: rgb(95, 180, 152);
+            }
+            *{
+                font-weight: bolder;
+                /* font-size: x-large; */
+                align-content: center;
+            }
+            label{
+               color: rgb(23, 39, 105);
+               
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div id="inner">
+                
+                   
+                    <label><u>Guess The Number</u></label><br>
+                    <p id="ot">Enter a number : </p>
+                    <div id="sub">
+                        <input id="enterNo">
+                        <br>
+                        <br>
+                        <button id="enter" onclick="checkNo()">Guess</button>
+                </div>
+                <p id="op">  </p>
+                
+        </div>
+        <script>
+            var no=document.getElementById("enter");
+            
+            
+        
+            var otext=document.getElementById("op");
+            var randomNo=Math.ceil(Math.random()*10);
+            // document.write(randomNo);
+            function checkNo(){
+                var inp=document.getElementById("enterNo").value;
+                
+                if(inp==randomNo){
+                    
+                    otext.innerHTML=" Congratulations!! You are correct. The number was " +randomNo;
+                    otext.style.color="Blue";
+                    otext.style.fontSize="40px";
+                    
+                }
+                else if(inp>randomNo){
+                    otext.innerHTML="Too high, TRY AGAIN";
+                    otext.style.color="red";
+                    otext.style.fontSize="40px";
+                }
+                else{
+                    otext.innerHTML="Too low, TRY AGAIN";
+                    otext.style.color="yellow";
+                    
+                    
+                }
+            }
+            
+            
+        </script>
+    </body>
+</html>

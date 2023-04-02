@@ -1,0 +1,14 @@
+body{
+    background-color: lightblue;
+}
+table{
+    border: 2px;
+}
+tr:hover{
+    background-color: blueviolet;
+    font-weight: bolder;
+    
+}
+tr:hover td{
+    border-radius: 100%;
+}
